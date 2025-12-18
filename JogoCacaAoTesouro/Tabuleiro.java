@@ -3,16 +3,10 @@ import java.util.Random;
 public class Tabuleiro {
 
     private final int TAM = 6;
-    private ElementoTabuleiro[][] matriz;
+    private final ElementoTabuleiro[][] matriz;
 
     public Tabuleiro() {
         matriz = new ElementoTabuleiro[TAM][TAM];
-
-        for (int l = 0; l < TAM; l++) {
-            for (int c = 0; c < TAM; c++) {
-                matriz[l][c] = new Vazio();
-            }
-        }
 
         posicionar(new Tesouro(), 3);
         posicionar(new Armadilha(), 3);
@@ -26,7 +20,7 @@ public class Tabuleiro {
             int l = rand.nextInt(TAM);
             int c = rand.nextInt(TAM);
 
-            if (matriz[l][c] instanceof Vazio) {
+            if (matriz[l][c] == null) {
                 matriz[l][c] = elemento;
                 colocados++;
             }
@@ -34,7 +28,7 @@ public class Tabuleiro {
     }
 
     public ElementoTabuleiro getElemento(int x, int y) {
-        return matriz[x][y];
+        return matriz[x][y] != null ? matriz[x][y] : new Vazio();
     }
 
     public int tamanho() {

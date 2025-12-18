@@ -15,7 +15,6 @@ public class FundingRaised {
         for(int i = 0; i < csvData.size(); i++) {
             output.add(RowMapper.map(csvData.get(i)));
         }
-
         return output;
     }
 

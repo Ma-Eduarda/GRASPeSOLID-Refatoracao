@@ -1,6 +1,7 @@
 package com.checkr.interviews;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class RowMapper {
     public static Map<String, String> map(String[] row) {
@@ -16,7 +17,7 @@ public class RowMapper {
         mapped.put("raised_amount", row[7]);
         mapped.put("raised_currency", row[8]);
         mapped.put("round", row[9]);
-
+        
         return mapped;
     }
 }
