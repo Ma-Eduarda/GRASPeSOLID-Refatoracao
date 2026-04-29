@@ -9,6 +9,6 @@ public abstract class Fita {
         return titulo;
     }
 
-    public abstract double calcularValor(int dias);
+    public abstract double calcularValor(int dias); 
     public abstract int calcularPontos(int dias);
 }
