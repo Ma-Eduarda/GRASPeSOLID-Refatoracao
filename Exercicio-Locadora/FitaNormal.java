@@ -15,3 +15,4 @@ public class FitaNormal extends Fita {
         return 1;
     }
 }
+
