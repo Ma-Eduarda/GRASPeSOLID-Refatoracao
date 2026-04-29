@@ -8,7 +8,7 @@ public class Locadora {
         c1.adicionaAluguel(new Aluguel(new FitaLancamento("Planeta dos Macacos"), 4));
         c1.adicionaAluguel(new Aluguel(new FitaInfantil("Pateta no Planeta dos Macacos"), 10));
         c1.adicionaAluguel(new Aluguel(new FitaInfantil("O Rei Leao"), 30));
-
+        
         System.out.println(c1.extrato());
     }
 }
