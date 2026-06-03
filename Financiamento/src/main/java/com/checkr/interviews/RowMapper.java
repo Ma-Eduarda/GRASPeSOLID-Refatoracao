@@ -4,8 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RowMapper {
+
     public static Map<String, String> map(String[] row) {
-        Map<String, String> mapped = new HashMap<>();
+        Map<String, String> mapped = new HashMap<String, String>();
 
         mapped.put("permalink", row[0]);
         mapped.put("company_name", row[1]);
@@ -17,7 +18,7 @@ public class RowMapper {
         mapped.put("raised_amount", row[7]);
         mapped.put("raised_currency", row[8]);
         mapped.put("round", row[9]);
-        
+
         return mapped;
     }
 }
